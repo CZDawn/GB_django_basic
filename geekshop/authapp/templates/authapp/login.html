@@ -1,5 +1,6 @@
 {% extends 'authapp/base.html' %}
-{% load staticfiles %}
+{% load static %}
+
 
 {% block content %}
     <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
@@ -8,4 +9,5 @@
         <br>
         <input class="form-control" type="submit" value="войти">
     </form>
+
 {% endblock %}

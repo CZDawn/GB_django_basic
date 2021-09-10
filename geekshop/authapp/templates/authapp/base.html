@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-{% load staticfiles %}
-<html lang="en">
+{% load static %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>
-        {% block title  %}
+	<meta charset="utf-8">
+	<title>
+        {% block title %}
             {{ title|title }}
         {% endblock %}
     </title>
-        {% block style %}{% endblock %}
-        {% block js %}{% endblock %}
+    {% block style %}{% endblock %}
+    {% block js %}{% endblock %}
 </head>
 <body>
-    <div class='container'>
-        <div class='login'>
-            <div class='h2 text-center head'>
+	<div class="container">
+        <div class="login">
+            <div class="h2 text-center head">
                 Вход в систему
-            </div>
-            {% block content %}{% endblock %}
+            </div>            
+            
+            {% block content %}
+
+            {% endblock %}
         </div>
-    </div>
+	</div>
 </body>
 </html>
