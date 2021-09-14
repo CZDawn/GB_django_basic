@@ -1,7 +1,5 @@
 {% extends 'authapp/base.html' %}
 {% load static %}
-
-
 {% block content %}
     <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
         {% csrf_token %}
@@ -9,5 +7,4 @@
         <br>
         <input class="form-control" type="submit" value="войти">
     </form>
-
 {% endblock %}
