@@ -19,25 +19,23 @@
                 <div class="slider-product">
                     <img src="/media/{{ hot_product.image }}">
                 </div>
-                <!-- не доделал отображение маленьких фоток
                 <div class="slider-control">
                     <div class="block">
-                        <a href="#"><img src="/media/{{ hot_product.image }}" alt="">
+                        <a href="#"><img src="/media/{{ hot_product.image }}" alt="" class="block">
                             <div class="text"></div>
                         </a>
                     </div>
                     <div class="block">
-                        <a href="#"><img src="/media/{{ hot_product.image }}" alt="">
+                        <a href="#"><img src="/media/{{ hot_product.image }}" alt="" class="block">
                             <div class="text"></div>
                         </a>
                     </div>
                     <div class="block">
-                        <a href="#"><img src="/media/{{ hot_product.image }}" alt="">
+                        <a href="#"><img src="/media/{{ hot_product.image }}" alt="" class="block">
                             <div class="text"></div>
                         </a>
                     </div>
                 </div>
-                -->
             </div>
 
             <div class="description">
@@ -61,10 +59,10 @@
             <div class="related-products clearfix">
                 {% for product in same_products %}
                     <div class='block'>
-                        <a href="{% url 'basket:add' product.pk %}">
+                        <a href="{% url 'products:product' product.pk %}">
                             <img src="/media/{{ product.image }}" alt="{{ product.short_dec }}">
                             <div class="text">
-                                <img src="{% static 'icon-hover.png' %}" alt="img">
+                                <img src="{% static 'img/icon-hover.png' %}" alt="img">
                                 <h3>Категория: {{ product.category.name }}</h3>
                                 <h4>Название: {{ product.name }}</h4>
                                 <p>Описание: {{ product.description }}</p>

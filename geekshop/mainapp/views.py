@@ -33,6 +33,17 @@ def main(request):
     return render(request, 'mainapp/index.html', content)
 
 
+def product(request, pk=None):
+    title = 'Продукт'
+    content = {
+        'title': title,
+        'links_menu': ProductCategory.objects.all(),
+        'product': get_object_or_404(Product, pk=pk),
+        'basket': get_basket(request.user)
+    }
+    return render(request, 'mainapp/product.html', content)
+
+
 def products(request, pk=None):
     print(pk)
 
